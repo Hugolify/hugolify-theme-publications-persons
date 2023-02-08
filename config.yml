@@ -10,3 +10,9 @@ module:
       target: layouts
   imports:
     - path: github.com/hugolify/hugolify-theme-persons
+
+# Default
+permalinks:
+  concerned: /publications/:slug/
+taxonomies:
+  concerned: concerned
