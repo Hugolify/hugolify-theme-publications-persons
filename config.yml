@@ -8,8 +8,6 @@ module:
       target: i18n
     - source: layouts
       target: layouts
-  imports:
-    - path: github.com/hugolify/hugolify-theme-persons
 
 # Default
 permalinks:
