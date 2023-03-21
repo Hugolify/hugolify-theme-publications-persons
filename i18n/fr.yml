@@ -1,5 +1,8 @@
 concerned:
+  all: Toutes les personnes concernées
   discover: Découvrir la personne concernée
+  latest: Dernière personnes concernées
+  more: Découvrir plus de personnes concernées
   title:
     one: Personnes concernée
     other: Personnes concernées

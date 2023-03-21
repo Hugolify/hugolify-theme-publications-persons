@@ -1,5 +1,8 @@
 concerned:
+  all: All concerned persons
+  latest: Latest concerned persons
   discover: Discover the concerned person
+  more: Discover more concerned persons
   title:
     one: Concerned person
     other: Persons concerned

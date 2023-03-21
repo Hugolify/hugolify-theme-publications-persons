@@ -1,8 +1,5 @@
-<div class="persons">
-  {{ range . }}
-    <div>
-      {{ $person := partial "func/GetRealPerson" . }}
-      {{ partial "persons/item" $person }}
-    </div>
-  {{ end }}
-</div>
+{{ $dict := . }}
+{{ if reflect.IsMap . }}
+  {{ $dict = (dict "pages" .pages "abovethefold" .abovethefold) }}
+{{ end }}
+{{ partial "commons/items" $dict }}
