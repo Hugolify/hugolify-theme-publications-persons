@@ -1,1 +1,15 @@
-{{ partial "persons/item" . }}
+{{ $permalink := .Permalink }}
+{{ $person := partial "func/GetRealPerson" . }}
+{{ with $person }}
+  <article class="concerned" itemscope itemtype="https://schema.org/Person"{{ partial "func/SetAnim" (dict "element" "item") }}>
+    <a href="{{ $permalink }}" itemprop="url" class="content">
+      {{ $statutes := "persons/item/statutes.html" }}
+      {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
+        {{ partial $statutes . }}
+      {{ end }}
+      {{ partial "commons/item/title" . }}
+      {{ partial "commons/item/description" . }}
+    </a>
+    {{ partial "persons/item/media" . }}
+  </article>
+{{ end }} 
