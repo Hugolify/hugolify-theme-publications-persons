@@ -1,0 +1,9 @@
+{{ define "hero"}}
+  {{- partial "publications_concerned/hero" . -}}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "publications_concerned/schema" . }}
+  {{ partial "publications_concerned/blocks" . }}
+  {{ partial "publications_concerned/container" . }}
+{{ end }}

@@ -13,6 +13,6 @@ module:
 
 # Default
 permalinks:
-  concerned: /publications/persons-concerned/:slug/
+  publications_concerned: /publications/persons-concerned/:slug/
 taxonomies:
-  concerned: concerned
+  publications_concerned: publications_concerned
