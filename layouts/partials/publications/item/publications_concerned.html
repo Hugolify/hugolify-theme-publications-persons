@@ -1,6 +1,6 @@
-{{ if .Params.concerned }}
-  <p class="concerned">
-    {{- range $index, $concerned := .Params.concerned -}}
+{{ if .Params.publications_concerned }}
+  <p class="publications_concerned">
+    {{- range $index, $concerned := .Params.publications_concerned -}}
       {{ if gt $index 0}}, {{ end }}
       {{- $person := where (where site.Pages "Section" "persons" ) "File.BaseFileName" "eq" . -}}
       {{ range $person }}{{ .Title }}{{ end }}

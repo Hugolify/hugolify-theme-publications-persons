@@ -1,6 +1,6 @@
 {{ range .Params.publications_concerned }}
   {{ $persons := where (where site.Pages "Section" "persons" ) "File.BaseFileName" "eq" . }}
   {{ range $persons }}
-    {{ partial "commons/person" (dict "person" . "item" "concerned" "section" "publications_concerned") }}
+    {{ partial "commons/person" (dict "person" . "item" "publications_concerned" "section" "publications_concerned") }}
   {{ end }}
 {{ end }}
