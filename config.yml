@@ -11,6 +11,12 @@ module:
     - source: layouts
       target: layouts
 
+params:
+  persons:
+    publications_concerned:
+      desktop: "50x50"
+      mobile: "50x50"
+
 # Default
 permalinks:
   publications_concerned: /publications/persons-concerned/:slug/

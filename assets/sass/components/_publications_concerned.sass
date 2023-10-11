@@ -1,38 +1,10 @@
 div.publications_concerned
-    @extend .persons
-
-article.publications_concerned
-    @extend .person
-
-aside.publications_concerned
-    --bs-card-border-width: 0
-    --bs-card-bg: transparent
-    --bs-card-cap-bg: transparent
-    --bs-card-spacer-x: 0
-    --bs-card-spacer-y: 0
-    @extend .card
-    .media
-        background-color: transparent
-        margin-bottom: .25rem
-        &::before
-            content: none
-        > *
-            position: relative
-            height: auto
-            width: auto
-    .description
-        @extend .small
-        color: $text-muted
-        margin-bottom: 0.5rem
-    p:last-child
-        @extend .small
-    @if variable-exists(bootstrap-icons-map)
-        a
-            &::before
-                @include icon("arrow-right")
-                font-size: px2rem(16)
-                margin-right: .25rem
-                vertical-align: middle
-            
-
-
+    --bs-gutter-y: calc(#{$global-spacing} / 2)
+    @extend .row 
+    @extend .row-cols-1
+    @extend .row-cols-md-3
+    @extend .row-cols-lg-4
+    @include media-breakpoint-up(md)
+        --bs-gutter-y: #{$global-spacing}
+    & + nav
+        @include margin-top($global-spacing)
