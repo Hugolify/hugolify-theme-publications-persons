@@ -1,6 +1,6 @@
-{{ if .Params.publications_concerned }}
-  <p class="publications_concerned">
-    {{- range $index, $persons := .GetTerms "publications_concerned" -}}
+{{ if .Params.publications_persons }}
+  <p class="concerned">
+    {{- range $index, $persons := .GetTerms "publications_persons" -}}
       {{ if gt $index 0}}, {{ end }}
       {{- with partial "func/GetRealPerson" . -}}
         {{ .Title }}

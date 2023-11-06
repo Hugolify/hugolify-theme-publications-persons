@@ -1,3 +1,3 @@
-module github.com/hugolify/hugolify-theme-publications-concerned
+module github.com/hugolify/hugolify-theme-publications-persons
 
 go 1.19

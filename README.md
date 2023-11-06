@@ -8,7 +8,8 @@ imports:
 ```
 
 ## Depends
-https://www.github.com/hugolify/hugolify-theme-persons
+* https://github.com/hugolify/hugolify-theme-persons
+* https://github.com/hugolify/hugolify-theme-publications
 
 ## Documentation
 https://github.com/hugolify/hugolify-template/wiki

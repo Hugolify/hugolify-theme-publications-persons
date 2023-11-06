@@ -13,12 +13,12 @@ module:
 
 params:
   persons:
-    publications_concerned:
+    publications_persons:
       desktop: "50x50"
       mobile: "50x50"
 
 # Default
 permalinks:
-  publications_concerned: /publications/persons-concerned/:slug/
+  publications_persons: /publications/persons-concerned/:slug/
 taxonomies:
-  publications_concerned: publications_concerned
+  publications_person: publications_persons
