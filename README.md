@@ -1,10 +1,10 @@
-# hugolify-theme-publications-concerned
+# hugolify-theme-publications-persons
 
 ## Install
-Edit `config/_default/module.yaml` to install the `hugolify-theme-publications-concerned` module:
+Edit `config/_default/module.yaml` to install the `hugolify-theme-publications-persons` module:
 ```yml
 imports:
-  - path: github.com/hugolify/hugolify-theme-publications-concerned
+  - path: github.com/hugolify/hugolify-theme-publications-persons
 ```
 
 ## Depends
