@@ -16,7 +16,7 @@ imports:
 
 ## Documentation
 
-https://github.com/hugolify/hugolify-template/wiki
+https://www.hugolify.io/docs/
 
 ## Licensing
 
