@@ -3,7 +3,7 @@
     {{- range $index, $persons := .GetTerms "publications_persons" -}}
       {{ if gt $index 0}}, {{ end }}
       {{- with partial "func/GetRealPerson" . -}}
-        {{- partial "func/PrepareHTML" (cond (eq .Type "persons") (.Title) (.Title | humanize)) -}}
+        {{- partial "func/PrepareHTML.html" (cond (eq .Type "persons") (.Title) (.Title | humanize)) -}}
       {{- end -}}
     {{- end -}}
   </p>
