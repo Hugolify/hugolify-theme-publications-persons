@@ -11,6 +11,7 @@ module:
     - source: layouts
       target: layouts
 
+# Images
 params:
   persons:
     publications_persons:
@@ -19,6 +20,9 @@ params:
 
 # Default
 permalinks:
-  publications_persons: /publications/persons-concerned/:slug/
+  taxonomy:
+    publications_persons: /publications/persons-concerned/
+  term:
+    publications_persons: /publications/persons-concerned/:slug/
 taxonomies:
   publications_person: publications_persons
