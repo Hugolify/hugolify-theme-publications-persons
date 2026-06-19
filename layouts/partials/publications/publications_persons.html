@@ -1,6 +1,10 @@
 {{ range .GetTerms "publications_persons" }}
   {{ partial "commons/person.html" (dict 
     "person" . 
-    "show_btn" false 
+    "show_btn" true 
+    "show_image" false 
+    "show_description" true 
+    "show_contacts" false 
+    "show_status" false 
     ) }}
 {{ end }}

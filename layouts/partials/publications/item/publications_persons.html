@@ -1,10 +1,12 @@
-{{ if .Params.publications_persons }}
+{{- with .GetTerms "publications_persons" }}
   <p class="concerned">
-    {{- range $index, $persons := .GetTerms "publications_persons" -}}
+    {{- $icon := cond (eq (len .) 1) "user" "users" -}}
+    {{- if templates.Exists "partials/icon.html" -}}{{ partial "icon.html" $icon }}{{- end -}}
+    {{- range $index, $persons := . -}}
       {{ if gt $index 0}}, {{ end }}
       {{- with partial "func/GetRealPerson" . -}}
         {{- partial "func/PrepareHTML.html" (cond (eq .Type "persons") (.Title) (.Title | humanize)) -}}
       {{- end -}}
     {{- end -}}
   </p>
-{{ end }}
+{{- end }}

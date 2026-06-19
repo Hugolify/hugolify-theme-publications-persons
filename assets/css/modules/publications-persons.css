@@ -1,0 +1,12 @@
+/* css/modules/publications-persons.css — hugolify-theme-publications-persons entry point */
+
+/* Tokens */
+@import '../tokens/publications-persons.css';
+
+/* Components */
+@import '../components/publications-person.css';
+@import '../components/publications-persons.css';
+
+/* Pages */
+@import '../pages/publications-person.css';
+@import '../pages/publications-persons.css';
