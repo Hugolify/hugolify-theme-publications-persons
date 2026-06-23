@@ -1,0 +1,11 @@
+/* components/publications-person.css */
+/*
+ * Usage: <article class="item publications_person">
+ */
+@layer components {
+  .publications_person {
+    .btn {
+      display: none;
+    }
+  }
+}
