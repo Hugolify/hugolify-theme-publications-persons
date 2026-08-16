@@ -1,10 +1,37 @@
-{{ range .GetTerms "publications_persons" }}
-  {{ partial "commons/person.html" (dict 
-    "person" . 
-    "show_btn" true 
-    "show_image" false 
-    "show_description" true 
-    "show_contacts" false 
-    "show_status" false 
+{{- $terms := .GetTerms "publications_persons" -}}
+{{- $pages := $terms -}}
+
+{{/* Order by statute weight then lastname: resolve the real person pages, sort them, then map back to the terms to keep the taxonomy context */}}
+{{- if gt (len $terms) 1 -}}
+  {{- $persons := slice -}}
+  {{- range $terms -}}
+    {{- with partial "func/GetRealPerson" . -}}
+      {{- $persons = $persons | append . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $ordered := slice -}}
+  {{- range partial "func/GetPersonsOrderByStatutes" $persons -}}
+    {{- with .File -}}
+      {{- with site.GetPage (printf "/publications_persons/%s" .TranslationBaseName) -}}
+        {{- $ordered = $ordered | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{/* Keep the original terms when a person cannot be mapped back, rather than dropping someone */}}
+  {{- if eq (len $ordered) (len $terms) -}}
+    {{- $pages = $ordered -}}
+  {{- end -}}
+{{- end -}}
+
+{{ range $pages }}
+  {{ partial "commons/person.html" (dict
+    "person" .
+    "show_btn" true
+    "show_image" false
+    "show_description" true
+    "show_contacts" false
+    "show_status" false
     ) }}
 {{ end }}
