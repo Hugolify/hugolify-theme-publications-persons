@@ -13,7 +13,7 @@
   {{- $ordered := slice -}}
   {{- range partial "func/GetPersonsOrderByStatutes" $persons -}}
     {{- with .File -}}
-      {{- with site.GetPage (printf "/publications_persons/%s" .TranslationBaseName) -}}
+      {{- with site.GetPage (printf "/publications_persons/%s" .ContentBaseName) -}}
         {{- $ordered = $ordered | append . -}}
       {{- end -}}
     {{- end -}}
