@@ -1,2 +1,2 @@
-{{ $person := partial "func/GetRealPerson" . }}
-{{ partial "persons/schema-single" $person }}
+{{- /* A person's publications: a listing about them, see pages/schema.html. */ -}}
+{{ partial "pages/schema.html" . }}
