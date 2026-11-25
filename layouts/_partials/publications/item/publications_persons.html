@@ -1,7 +1,7 @@
 {{- with .GetTerms "publications_persons" }}
   <p class="concerned">
     {{- $icon := cond (eq (len .) 1) "user" "users" -}}
-    {{- if templates.Exists "partials/icon.html" -}}{{ partial "icon.html" $icon }}{{- end -}}
+    {{- if templates.Exists "_partials/icon.html" -}}{{ partial "icon.html" $icon }}{{- end -}}
     {{- range $index, $persons := . -}}
       {{ if gt $index 0}}, {{ end }}
       {{- with partial "func/GetRealPerson" . -}}
